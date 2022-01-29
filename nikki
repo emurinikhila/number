@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('continuous download') {
+            steps {
+                echo 'nikhila'
+            }
+        }
+        
+    }
+}
+
