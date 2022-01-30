@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('continuous download') {
             steps {
-                 git 'https://github.com/efsavage/hello-world-war.git'
-            }
+                git 'https://github.com/kliakos/sparkjava-war-example.git'
+           
         }
         stage('continuous build') {
             steps {
@@ -14,7 +14,7 @@ pipeline {
         }
          stage('continuous deployment') {
             steps {
-             sh 'sshpass -p "nikhila" scp target/hello-world-war-1.0.0.war root@172.17.0.2:/var/lib/apache-tomcat-9.0.56/webapps'   
+             sh 'sshpass -p "nikhila" scp target/maven-compiler-plugin-3.1.war root@172.17.0.3:/var/lib/apache-tomcat-9.0.56/webapps'   
             }
         }
        
